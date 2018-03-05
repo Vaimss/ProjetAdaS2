@@ -53,8 +53,8 @@ Statut | Nature      | Nom         | Action
 Statut | Nature      | Nom                   | Action      
 :-----:|-------------|-----------------------|-------------
 /      | *Procedure* | **NewAdherent**       | Saisit puis ajoute un adherent
-/      | *Procedure* | **NewReservation**    | Pour un adherent, choisit un creneau l'ajoute
-/      | *Procedure* | **CancelReservation** | Pour un adherent, choisit un creneau le supprime
+/      | *Procedure* | **NewReservation**    | Pour un adherent, choisit un creneau puis l'ajoute
+/      | *Procedure* | **CancelReservation** | Pour un adherent, choisit un creneau puis le supprime
 /      | *Procedure* | **NextDay**           | Passe au jour suivant, actualise les contrats (et les plannings si dimanche)
 /      | *Procedure* | **Save**              | Sauvegarde la liste des adherents, leurs infos et le planning general
 /      | *Procedure* | **Restore**           | Restore la liste des adherents et des infos, et le planning general
