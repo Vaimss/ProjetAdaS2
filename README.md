@@ -10,11 +10,11 @@
 
 Statut | Nature      | Nom     | Action      
 -------|-------------|---------|-------------
-done   | *Procedure* | **Get** | Contrat 
-done   | *Procedure* | **Put** | Contrat 
-done   | *Procedure* | **Put** | Creneau
-done   | *Procedure* | **Get** | Adherent 
-done   | *Procedure* | **Put** | Adherent
+done   | *Procedure* | **Get** | Saisit un contrat 
+done   | *Procedure* | **Put** | Affiche un contrat 
+done   | *Procedure* | **Put** | Affiche un creneau
+done   | *Procedure* | **Get** | Saisit un adherent 
+done   | *Procedure* | **Put** | Affiche un adherent
 
 ## GestionListe
 
