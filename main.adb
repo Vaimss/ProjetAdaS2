@@ -1,5 +1,5 @@
-with Dates, GestionAdherent, GestionListe, GestionArbre, Tools;
-use  Dates, GestionAdherent, GestionListe, GestionArbre, Tools;
+with GestionAdherent, GestionListe, GestionArbre;
+use  GestionAdherent, GestionListe, GestionArbre;
 
 Procedure main is
 
