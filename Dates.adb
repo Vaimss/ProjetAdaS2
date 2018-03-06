@@ -7,12 +7,20 @@ Package body Dates is
 		s: string (1..11);
 		k: integer;
 	begin
-		get_line (s, k); date := value(s(1..k));
+		loop
+			begin
+				get_line (s, k);
+				date := (if k = 0 then Gnat.calendar.No_Time else value(s(1..k)));
+				exit;
+			exception
+				when others => put_line ("Erreur de saisie. Veuillez recommencer.");
+			end;
+		end loop;
 	end Get;
 
 	Procedure Put (date: in  time) is
 	begin
-		put_time(date, "Date   :  %d/%m/%Y");
+		put_time(date, European_Date);
 	end Put;
 
 end Dates;

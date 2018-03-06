@@ -1,5 +1,5 @@
-With Ada.Calendar;
-Use  Ada.Calendar;
+With Ada.Calendar, Gnat.Calendar;
+Use  Ada.Calendar, Gnat.Calendar;
 
 Package GestionAdherent is
 
@@ -35,8 +35,8 @@ Package GestionAdherent is
         record
             Nom          : Mot30 := (others => ' ');
             Prenom       : Mot30 := (others => ' ');
-            DateNaissance: Time;
-            DateContrat  : Time;
+            DateNaissance: Time  := No_Time;
+            DateContrat  : Time  := No_Time;
             NbSeance     : Natural := 0;
             Contrat      : T_Contrat := FA;
             Planning     : T_PlanningPerso := (others => (others => A));
