@@ -1,5 +1,5 @@
-with ada.text_io, gnat.calendar.time_io;
-use  ada.text_io, gnat.calendar.time_io;
+with ada.text_io, gnat.calendar.time_io, ANSI;
+use  ada.text_io, gnat.calendar.time_io, ANSI;
 
 Package body Dates is
 
@@ -13,7 +13,11 @@ Package body Dates is
 				date := (if k = 0 then Gnat.calendar.No_Time else value(s(1..k)));
 				exit;
 			exception
-				when others => put_line ("Erreur de saisie. Veuillez recommencer.");
+				when others => 
+					moveCursor (Up); restoreCursor; clearLine;
+					put_line ("Erreur de saisie. Veuillez recommencer.");
+					hideInput; delay 1.0; showInput;
+					restoreCursor; clearLine;
 			end;
 		end loop;
 	end Get;

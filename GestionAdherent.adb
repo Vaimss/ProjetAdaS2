@@ -1,5 +1,5 @@
-with Dates, Tools, ada.text_io;
-use  Dates, Tools, ada.text_io;
+with Dates, Tools, ANSI, ada.text_io;
+use  Dates, Tools, ANSI, ada.text_io;
 
 Package body GestionAdherent is
 
@@ -27,10 +27,14 @@ Package body GestionAdherent is
 
     Procedure Get (Adherent: out T_Adherent) is
     begin
-        Put ("Nom               : "); AltGet (Adherent.Prenom);
-        Put ("Prenom            : "); AltGet (Adherent.Nom);
-        Put ("Date de Naissance : "); Get    (Adherent.DateNaissance);
-        Put ("Type de Contrat   : "); Get    (Adherent.Contrat);
+        Put_line ("Nom               : "); 
+        Put_line ("Prenom            : "); 
+        Put_line ("Date de Naissance : ");
+        Put      ("Type de Contrat   : "); 
+        moveCursor (Up, 3);     sGet (Adherent.Prenom);
+        moveCursor (right, 20); sGet (Adherent.Nom);
+        moveCursor (right, 20); Get  (Adherent.DateNaissance);
+        moveCursor (right, 20); Get  (Adherent.Contrat);
         --Put ("Date ");Get (Adherent.DateContrat); ou bien Adherent.DateContrat := clock;
     end Get;
 
@@ -45,3 +49,4 @@ Package body GestionAdherent is
     end Put;
 
 end GestionAdherent;
+
